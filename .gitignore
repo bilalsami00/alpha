@@ -1,0 +1,28 @@
+@'
+# Node / Next
+node_modules/
+.next/
+out/
+dist/
+build/
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# Logs / OS / IDE
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+.vscode/
+.idea/
+.DS_Store
+
+# Static/build artifacts
+public/static/
+.next/static/
+
+# Mac/Windows thumbnail files
+Thumbs.db
+'@ | Set-Content -Path .gitignore -Encoding UTF8
