@@ -6,7 +6,7 @@ import type { User } from "./types";
 export default function ConfirmModal({ type, user, onCancel, onConfirm }: { type: "restrict" | "delete"; user: User; onCancel: () => void; onConfirm: () => void; }) {
   return (
     <div className="fixed inset-0 bg-[#00000033] flex items-center justify-center z-50" onClick={(e) => { if (e.target === e.currentTarget) onCancel(); }}>
-      <div className="bg-white rounded-lg p-7.5 w-96 sm:w-133">
+      <div className="bg-white rounded-lg p-7.5 w-96 sm:w-133 max-sm:mx-6">
         <button onClick={onCancel} className="absolute right-4 top-4 p-1 rounded-full hover:bg-gray-100" aria-label="Close">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 6l12 12M6 18L18 6" stroke="#6B7280" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
         </button>

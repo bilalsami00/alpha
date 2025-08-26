@@ -192,7 +192,7 @@ export default function Dashboard() {
             </div>
 
             {/* Navigation */}
-            <nav className="mt-8">
+            <nav className="mt-12">
               <ul className="space-y-2">
                 {menuItems.map((item) => {
                   const isParentSelected = isTabSelected(item.name);
@@ -269,7 +269,7 @@ export default function Dashboard() {
                             e.preventDefault();
                             handleTabSelect(item.name, false);
                           }}
-                          className={`flex items-center px-4 py-3 txt-16 rounded-md transition-colors ${
+                          className={`flex items-center px-4 py-2 txt-16 rounded-md transition-colors ${
                             isParentSelected
                               ? "bg-brand text-[#0E0E0E] font-medium"
                               : "font-normal hover:bg-neutral-100"

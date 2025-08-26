@@ -7,7 +7,7 @@ export default function ViewModal({ user, selectedTeam, onChangeTeam, onClose, o
   const getInitials = (name: string) => name.split(" ").map(p => p[0]).slice(0,2).join("").toUpperCase();
   return (
     <div className="fixed inset-0 bg-[#00000033] flex items-center justify-center z-50" onClick={(e) => { if (e.target === e.currentTarget) onClose(); }} role="dialog" aria-modal="true" aria-labelledby="view-user-title">
-      <div className="bg-white rounded-lg max-w-[438px] max-h-[475px] mx-6 relative">
+      <div className="bg-white rounded-lg max-w-[438px] max-h-[475px] max-sm:mx-6 relative">
         <div className="px-6 py-4 flex items-center border-b border-[#E9EDEE]">
           <h3 id="view-user-title" className="text-[20px] font-semibold">View Request</h3>
           <button onClick={onClose} className="absolute right-4 p-1 rounded-full hover:bg-gray-100" aria-label="Close">
