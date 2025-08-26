@@ -5,6 +5,8 @@ import type { User } from "./types";
 import UserRow from "./UserRow";
 import { GoPeople } from "react-icons/go";
 
+import Image from "next/image";
+
 export default function UsersTable({
   users,
   activeTab,
@@ -31,7 +33,7 @@ export default function UsersTable({
   totalItems: number;
 }) {
   return (
-    <div className="bg-white rounded-lg shadow-sm overflow-auto sm:ml-6">
+    <div className="bg-white rounded-lg shadow-sm overflow-auto sm:ml- 6">
       <table className="min-w-full overflow-x-auto divide-y divide-gray-200">
         <thead className="bg-[#E9EDEE]">
           <tr>
@@ -65,13 +67,23 @@ export default function UsersTable({
             <tr>
               <td colSpan={activeTab === "request" ? 4 : 3} className="p-0">
                 <div className="w-full flex items-center justify-center" style={{ height: 616 }} role="status" aria-live="polite">
-                  <div className="flex flex-col items-center justify-center" style={{ width: 1136 }}>
-                    <div className="w-16 h-16 rounded-full bg-brand flex items-center justify-center">
-                      <GoPeople size={32} className="text-white" />
+                  <div className="flex flex-col items-center justify-center" style={{ width: 357 }}>
+                    <div className="w-16 h-16 rounded-full   flex items-center justify-center">
+                      {/* <GoPeople size={32} className="text-brand" /> */}
+                      {/* // Then replace the GoPeople icon with this Image component */}
+                      <div className="w-16 h-16 rounded-full  flex items-center justify-center">
+                        <Image 
+                          src="/dashboardIcons/empty-user-2.svg" // Update this path to your PNG image
+                          alt="No data" 
+                          width={64}
+                          height={64}
+                          style={{ opacity: 1 }}
+                        />
+                      </div>
                     </div>
 
                     <div className="text-center mt-4">
-                      <div className="text-[24px] leading-[32px] font-semibold text-text-col">{emptyStateCopy[activeTab].title}</div>
+                      <div className="text-[24px] leading-[32px] font-semibold ">{emptyStateCopy[activeTab].title}</div>
                       <div className="text-[16px] leading-[24px] font-medium text-text-col mt-2" style={{ opacity: 1 }}>{emptyStateCopy[activeTab].subtitle}</div>
                     </div>
                   </div>

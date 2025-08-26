@@ -217,7 +217,7 @@ export default function Toast({
       style={{ width: 300 }} /* width keeps exact 300px */
     >
       <div
-        className="w-[300px] h-12 px-3 flex items-center gap-3 rounded-md bg-white shadow-[0_4px_16px_0_rgba(0,0,0,0.08)]"
+        className="w-[300px] h-12 px-3 flex items-center gap-3 rounded-md bg-white shadow-[0_4px_16px_0_rgba(0,0,0,0.08)] border-l-2 border-[#00C47E]"
         role="alert"
       >
         <div className="flex-shrink-0">{Icon}</div>
